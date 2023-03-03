@@ -114,6 +114,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# TODO 让 Django 用户认证系统使用我们自定义的用户模型
 AUTH_USER_MODEL = 'users.User'
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',

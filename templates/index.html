@@ -14,6 +14,7 @@
             <h1 class="logo"><a href="{% url 'index' %}">Django Auth Example</a></h1>
             {% if user.is_authenticated %}
                 <p>你已登录，欢迎你：<a href="#">{{ user.username }}</a></p>
+{#              TODO   始终传递一个 next 参数记录用户之前访问页面的 URL。在跳转前，需要对跳转的 URL 做安全性检查#}
                 <button class="btn btn-default"><a href="{% url 'logout' %}?next={{ request.path }}">注销登录</a>
                 </button>
                 <button class="btn btn-default"><a href="{% url 'password_change' %}?next={{ request.path }}">修改密码</a>
